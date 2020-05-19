@@ -2,7 +2,7 @@ import * as React from 'react';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { getCurrentLocale } from './features/counter/appSlice';
+import { getCurrentLocale } from './features/appSlice';
 
 import en from './locales/en.json';
 import fr from './locales/fr.json';

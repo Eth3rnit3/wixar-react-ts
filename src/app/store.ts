@@ -1,10 +1,11 @@
 import { configureStore, combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { persistReducer, persistStore } from 'redux-persist';
-import appReducer from '../features/counter/appSlice';
 import storage from 'redux-persist/lib/storage';
+import appReducer from '../features/appSlice';
+import authReducer, { keyStore } from '../features/authSlice';
 
 const persistConfig = {
-  key: 'wwr-v1.0',
+  key: keyStore,
   storage,
   whitelist: ['app', 'auth'],
   blacklist: []
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   app: appReducer,
+  auth: authReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

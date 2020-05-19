@@ -2,6 +2,15 @@
   "translation": {
     "app": {
       "title": "Welcome to Wild Web VR"
+    },
+    "pages": {
+      "login": {
+        "title": "Connexion",
+        "username": "Username",
+        "password": "Password",
+        "keepSession": "Stay connected",
+        "login": "Connect"
+      }
     }
   }
 }

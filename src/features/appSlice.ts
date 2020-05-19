@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { IStore, IAppState } from '../../interfaces/store';
+import { IStore, IAppState } from '../interfaces/store';
 
 const initialState: IAppState = {
-  locale: navigator.language.slice(0, 2) || 'fr'
+  locale: navigator?.language?.slice(0, 2) || 'fr'
 };
 
 export const appSlice = createSlice({
