@@ -3,5 +3,5 @@ export interface IStore {
 }
 
 export interface IAppState{
-  locale: 'en' | 'fr';
+  locale: 'en' | 'fr' | string;
 }

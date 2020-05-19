@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { IStore, IAppState } from '../../interfaces/store';
 
 const initialState: IAppState = {
-  locale: 'fr'
+  locale: navigator.language.slice(0, 2) || 'fr'
 };
 
 export const appSlice = createSlice({
