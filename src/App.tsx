@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useDispatch } from 'react-redux';
+import { setLocale } from './features/counter/appSlice';
 
 function App() {
+  const dispatch = useDispatch();
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <button
+        onClick={() => dispatch(setLocale('en'))}
+      >Update locale</button>
     </div>
   );
 }
