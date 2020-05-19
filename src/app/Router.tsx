@@ -1,17 +1,21 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../pages/Home';
+import Dashboard from '../pages/Dashboard';
 import PrivateRoute from '../components/PrivateRoute';
 import Login from '../pages/Login';
+import Template from '../components/Template';
 
 interface IRouterProps {
+  isConnected: boolean;
 }
 
-const Router: React.FunctionComponent<IRouterProps> = (props) => {
+const Router: React.FunctionComponent<IRouterProps> = ({ isConnected }) => {
   return (
     <Switch>
       <Route exact path="/" component={Login} />
-      <PrivateRoute exact path="/dashboard" component={Home} />
+      <Template>
+        <PrivateRoute exact path="/dashboard" component={Dashboard} />
+      </Template>
     </Switch>
   );
 };

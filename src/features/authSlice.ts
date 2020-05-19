@@ -75,6 +75,7 @@ export const signIn = (identifier: string, password: string, keepSession: boolea
 };
 
 export const getJwt = (state: IStore) => state.auth.jwt;
+export const getCurrentUser = (state: IStore) => state.auth.creator;
 export const getIsConnected = (state: IStore) => state.auth.isConnected;
 export const getIsKeepSession = (state: IStore) => state.auth.keepSession;
 

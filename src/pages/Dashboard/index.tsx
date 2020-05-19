@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next';
 import { setLocale } from '../../features/appSlice';
 import { logout } from '../../features/authSlice';
 
-interface IHomeProps {
+interface IDashboardProps {
 }
 
-const Home: React.FunctionComponent<IHomeProps> = () => {
+const Dashboard: React.FunctionComponent<IDashboardProps> = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   return (
@@ -32,4 +32,4 @@ const Home: React.FunctionComponent<IHomeProps> = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
