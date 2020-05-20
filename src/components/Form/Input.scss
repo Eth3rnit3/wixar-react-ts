@@ -1,0 +1,43 @@
+@import '../../assets/styles/colors.scss';
+.wixar-form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  label.wixar-form-label {
+  }
+  input.wixar-form-input {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid $bluegreen;
+    color: $white;
+    padding: 5px;
+
+    &:active {
+      outline: none !important;
+      border:1px solid $green;
+      box-shadow: 0 0 10px $bluegreen;
+    }
+    &:focus {
+      outline: none !important;
+      border:1px solid $green;
+      box-shadow: 0 0 10px $bluegreen;
+    }
+  }
+}
+
+.wixar-form-group.box {
+  display: inline;
+  label.wixar-form-label {
+    margin-right: 10px;
+  }
+}
+
+.wixar-form-group.sm {
+  width: 33%;
+}
+.wixar-form-group.md {
+  width: 66%;
+}
+.wixar-form-group.lg {
+  width: 100%;
+}

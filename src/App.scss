@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap');
+@import './assets/styles/colors.scss';
+
+body, #root {
+  background: $blue-radian;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Nunito;
+  overflow: scroll;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  color: $bluegreen;
+  font-weight: 600;
+}
+
+p, label {
+  color: $white;
+}
+
+label {
+  font-weight: 600;
+}
+
+.pointed {
+  cursor: pointer;
+}

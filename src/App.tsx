@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Router from './app/Router';
 import Translator from './Translator';
 import { getIsKeepSession, logout } from './features/authSlice';
-import './App.css';
+import './App.scss';
 
 function App() {
   const dispatch = useDispatch()

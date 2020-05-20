@@ -1,0 +1,16 @@
+$green: #02fca5;
+$bluegreen: #45FFD6;
+$red: #FF3400;
+$blue-radian: linear-gradient(180.09deg, #152969 0.15%, #010038 77.2%);
+$light-green-radian: linear-gradient(240deg, #02fca5, #45FFD6);
+$darkblue: #010038;
+$white: white;
+
+:export {
+  green: $green;
+  bluegreen: $bluegreen;
+  red: $red;
+  blueRadian: $blue-radian;
+  darkblue: $darkblue;
+  white: $white;
+}

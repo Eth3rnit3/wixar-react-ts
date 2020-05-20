@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import { Redirect } from 'react-router-dom';
 import { setLocale } from '../../features/appSlice';
 import { signIn, getIsConnected } from '../../features/authSlice';
-import { Redirect } from 'react-router-dom';
+import Input from '../../components/Form/Input';
+
+import './index.scss';
 
 interface ILoginProps {
 }
@@ -27,23 +30,33 @@ const Login: React.FunctionComponent<ILoginProps> = () => {
     dispatch(signIn(identifier, password, keepSession));
   }
   return (
-    <div>
-      <h1>{t('pages.login.title')}</h1>
-      <form onSubmit={runSignIn}>
-        <label htmlFor="identifier">
-          {t('pages.login.username')}
-          <input id="identifier" name="identifier" type="text"/>
-        </label>
-        <label htmlFor="password">
-          {t('pages.login.password')}
-          <input id="password" name="password" type="text"/>
-        </label>
-        <label htmlFor="keepSession">
-          {t('pages.login.keepSession')}
-          <input defaultChecked id="keepSession" name="keepSession" type="checkbox" />
-        </label>
-        <button type="submit">{t('pages.login.login')}</button>
-      </form>
+    <div className="login-page d-flex flex-column justify-content-center align-items-center">
+      <div>
+        <h1>{t('pages.login.title')}</h1>
+        <form className="d-flex flex-column" onSubmit={runSignIn}>
+          <Input
+            className="lg"
+            id="identifier"
+            name="identifier"
+            label={t('pages.login.username')}
+          />
+          <Input
+            className="lg"
+            id="password"
+            name="password"
+            label={t('pages.login.password')}
+          />
+          <Input
+            className="lg"
+            defaultChecked
+            id="keepSession"
+            name="keepSession"
+            label={t('pages.login.keepSession')}
+            type="checkbox"
+          />
+          <button type="submit">{t('pages.login.login')}</button>
+        </form>
+      </div>
     </div>
   );
 };
