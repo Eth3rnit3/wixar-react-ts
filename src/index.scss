@@ -1,3 +1,7 @@
+@import './assets/styles/colors.scss';
+
+$primary: $bluegreen;
+$success: $green;
+$danger: $red;
 @import '~bootstrap/scss/bootstrap.scss';
-// $primary: red !important;
 // $secondary: red !important;

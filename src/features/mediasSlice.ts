@@ -23,18 +23,29 @@ export const mediaSlice = createSlice({
     addMedia: (state, action) => {
       state.list.push(action.payload);
     },
+    deleteMedia: (state, action) => {
+      state.list = state.list.filter(media => media.id !== action.payload)
+    },
     clearMedias: (state, action) => {
       state.list = [];
     },
   },
 });
 
-export const { setLoading, setMedias, clearMedias, addMedia } = mediaSlice.actions;
+export const { setLoading, setMedias, clearMedias, addMedia, deleteMedia } = mediaSlice.actions;
 
 export const fetch = (query: any = {}) => (dispatch: Dispatch) => {
   dispatch(setLoading(true));
   axios.get(apiUrls.medias.all, {params: {...query}})
   .then((response) => dispatch(setMedias(response.data)))
+  .catch((error) => console.log(error))
+  .finally(() => dispatch(setLoading(false)));
+};
+
+export const destroy = (mediaId: number) => (dispatch: Dispatch) => {
+  dispatch(setLoading(true));
+  axios.delete(`${apiUrls.medias.all}/${mediaId}`)
+  .then((response) => dispatch(deleteMedia(mediaId)))
   .catch((error) => console.log(error))
   .finally(() => dispatch(setLoading(false)));
 };

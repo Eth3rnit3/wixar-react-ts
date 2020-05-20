@@ -26,6 +26,10 @@
       "gallery": {
         "title": "Gallery"
       }
+    },
+    "shared": {
+      "loading": "Chargement ...",
+      "areYouSure": "Êtes vous sûr de vouloir affectuer cette action ?"
     }
   }
 }

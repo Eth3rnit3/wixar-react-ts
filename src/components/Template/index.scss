@@ -2,7 +2,11 @@
 
 .wvr-app {
   .topbar {
+    position: fixed;
+    width: 100vw;
+    height: 85px; // dependant of logo size
     background-color: $darkblue;
+    z-index: 2;
   }
   .sidebar {
     background-color: $darkblue;
@@ -13,6 +17,8 @@
   .content {
     margin-left: 80px;
     padding: 15px;
+    padding-top: 85px; // same of topbar height
+    position: relative;
   }
 
 }

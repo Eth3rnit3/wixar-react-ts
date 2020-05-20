@@ -1,0 +1,15 @@
+@import '../../assets/styles/colors.scss';
+
+.fullscreen-loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(000, 000, 000, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  p {
+    color: $bluegreen;
+  }
+}
