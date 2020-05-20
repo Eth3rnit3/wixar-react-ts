@@ -6,10 +6,9 @@ import Login from '../pages/Login';
 import Template from '../components/Template';
 
 interface IRouterProps {
-  isConnected: boolean;
 }
 
-const Router: React.FunctionComponent<IRouterProps> = ({ isConnected }) => {
+const Router: React.FunctionComponent<IRouterProps> = (props) => {
   return (
     <Switch>
       <Route exact path="/" component={Login} />
