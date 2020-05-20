@@ -3,6 +3,15 @@
     "app": {
       "title": "Bienvenue sur Wild Web VR"
     },
+    "topbar": {
+      "logout": "Déconnexion",
+      "locales": "Changer de langue"
+    },
+    "sidebar": {
+      "dashboard": "Tableau de bord",
+      "projects": "Mes projets",
+      "gallery": "Mes médias"
+    },
     "pages": {
       "login": {
         "title": "Connexion",

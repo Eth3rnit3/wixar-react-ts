@@ -10,16 +10,18 @@ interface ISidebarItemProps {
   linkTo: string;
   iconSize?: number | string;
   icon: IconType;
+  dataTip?: string
 }
 
 const SidebarItem: React.FunctionComponent<ISidebarItemProps> = ({
   linkTo,
   iconSize = '40px',
-  icon: Icon
+  icon: Icon,
+  dataTip
 }) => {
   const isActive = window.location.href.includes(linkTo);
   return (
-    <Link className={`animated-action sidebar-item ${isActive ? 'active' : ''}`} to={linkTo}>
+    <Link data-tip={dataTip} className={`animated-action sidebar-item ${isActive ? 'active' : ''}`} to={linkTo}>
       <Icon size={iconSize} color={colors.green} />
     </Link>
   );

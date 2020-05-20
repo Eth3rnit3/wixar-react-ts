@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import ReactTooltip from "react-tooltip";
 import Router from './app/Router';
 import Translator from './Translator';
 import { getIsKeepSession, logout } from './features/authSlice';
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <Translator>
+      <ReactTooltip />
       <BrowserRouter>
         <Router />
       </BrowserRouter>
