@@ -6,7 +6,6 @@ import App from './App';
 import store, { persistor } from './app/store';
 import * as serviceWorker from './serviceWorker';
 import './index.scss';
-import 'bootstrap/scss/bootstrap.scss';
 
 ReactDOM.render(
   <React.StrictMode>
