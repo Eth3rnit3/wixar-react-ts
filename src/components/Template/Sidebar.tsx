@@ -1,24 +1,17 @@
 import * as React from 'react';
 import { AiOutlineDashboard, AiFillProject } from 'react-icons/ai';
-import { GrGallery } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
+import { MdPermMedia } from 'react-icons/md';
+import SidebarItem from './SidebarItem';
 
 interface ISidebarProps {
 }
 
 const Sidebar: React.FunctionComponent<ISidebarProps> = (props) => {
-  const iconSize = '40px'
   return (
-    <div className="sidebar">
-      <Link to="/dashboard">
-        <AiOutlineDashboard size={iconSize} color="gray" />
-      </Link>
-      <Link to="/projects">
-        <AiFillProject size={iconSize} color="gray" />
-      </Link>
-      <Link to="/gallery">
-        <GrGallery size={iconSize} color="gray" />
-      </Link>
+    <div className="sidebar d-flex flex-column justify-content-around align-items-center">
+      <SidebarItem linkTo="/dashboard" icon={AiOutlineDashboard} />
+      <SidebarItem linkTo="/projects" icon={AiFillProject} />
+      <SidebarItem linkTo="/gallery" icon={MdPermMedia} />
     </div>
   );
 };

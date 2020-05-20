@@ -1,15 +1,14 @@
+@import '../../assets/styles/colors.scss';
+
 .wvr-app {
   .topbar {
-    background-color: lightgray;
+    background-color: $darkblue;
   }
   .sidebar {
-    background-color: lightcoral;
+    background-color: $darkblue;
     position: fixed;
     width: 80px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .content {
     margin-left: 80px;

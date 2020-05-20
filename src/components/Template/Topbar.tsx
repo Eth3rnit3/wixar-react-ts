@@ -5,6 +5,7 @@ import { ICreator } from '../../interfaces/models';
 import { AiOutlineLogout } from 'react-icons/ai';
 import { getCurrentLocale, setLocale } from '../../features/appSlice';
 import FlatSelect from '../Form/FlatSelect';
+import WixarLogo from '../svgs/WixarLogo';
 
 const languages = [{label: 'English', value: 'en'}, {label: 'Français', value: 'fr'}]
 
@@ -17,6 +18,9 @@ const Topbar: React.FunctionComponent<ITopbarProps> = (props) => {
   const currentLocale: string = useSelector(getCurrentLocale);
   return (
     <div className="topbar d-flex justify-content-end">
+      <div className="ml-1 mr-auto">
+      <WixarLogo />
+      </div>
       <div className="mr-2">
         <p>{currentUser.user_name}</p>
       </div>

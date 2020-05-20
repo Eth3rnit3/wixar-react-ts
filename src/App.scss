@@ -6,7 +6,8 @@ body, #root {
   background-repeat: no-repeat;
   height: 100vh;
   font-family: Nunito;
-  overflow: scroll;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h5 {
@@ -24,4 +25,13 @@ label {
 
 .pointed {
   cursor: pointer;
+}
+
+.animated-action {
+  opacity: 0.7;
+  transition: transform 200ms;
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }

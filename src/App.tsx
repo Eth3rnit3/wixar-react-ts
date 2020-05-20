@@ -5,10 +5,12 @@ import Router from './app/Router';
 import Translator from './Translator';
 import { getIsKeepSession, logout } from './features/authSlice';
 import './App.scss';
+import { setAuthHeader } from './utils/auth';
 
 function App() {
   const dispatch = useDispatch()
   const isKeepSession = useSelector(getIsKeepSession);
+  setAuthHeader();
 
   React.useEffect(() => {
     return () => {

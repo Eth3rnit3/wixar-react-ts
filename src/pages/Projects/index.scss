@@ -1,0 +1,14 @@
+@import '../../assets/styles/colors.scss';
+
+.wixar-projects {
+  .projects-container {
+    .project-item {
+      svg {
+        color: $green;
+      }
+      p{
+        color: $bluegreen;
+      }
+    }
+  }
+}

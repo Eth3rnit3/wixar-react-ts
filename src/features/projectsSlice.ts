@@ -31,7 +31,7 @@ export const { setProjects, clearProjects, setLoading } = projectSlice.actions;
 export const fetch = (query: any = {}) => (dispatch: Dispatch) => {
   dispatch(setLoading(true));
   axios.get(apiUrls.projects.all, {params: {...query}})
-  .then((response) => setProjects(response.data))
+  .then((response) => dispatch(setProjects(response.data)))
   .catch((error) => console.log(error))
   .finally(() => dispatch(setLoading(false)));
 };
