@@ -3,6 +3,15 @@
     "app": {
       "title": "Welcome to Wild Web VR"
     },
+    "topbar": {
+      "logout": "Logout",
+      "locales": "Change language"
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "projects": "My projects",
+      "gallery": "Gallery"
+    },
     "pages": {
       "login": {
         "title": "Connexion",
@@ -10,7 +19,17 @@
         "password": "Password",
         "keepSession": "Stay connected",
         "login": "Connect"
+      },
+      "projects": {
+        "title": "Projects"
+      },
+      "gallery": {
+        "title": "Gallery"
       }
+    },
+    "shared": {
+      "loading": "Loading ...",
+      "areYouSure": "Are you sure you want to execute this action?"
     }
   }
 }

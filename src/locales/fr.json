@@ -21,10 +21,10 @@
         "login": "Se connecter"
       },
       "projects": {
-        "title": "Projets"
+        "title": "Mes projets"
       },
       "gallery": {
-        "title": "Gallery"
+        "title": "Mes medias"
       }
     },
     "shared": {
