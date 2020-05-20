@@ -11,6 +11,7 @@ export interface ICreator {
     created_at: string;
     updated_at: string;
   }
+  organization: IOrganization;
 }
 
 export interface ISession {

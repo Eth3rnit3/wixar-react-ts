@@ -19,22 +19,22 @@ const initialState: IAuthState = {
       role_name: '',
       created_at: '',
       updated_at: '',
+    },
+    organization: {
+      id: 0,
+      name: '',
+      created_at: '',
+      updated_at: '',
+      legal_name: '',
+      address_locality: '',
+      address_region: '',
+      address_country: '',
+      phone: '',
+      postal_code: '',
+      email: '',
+      siret: '',
+      street_address: ''
     }
-  },
-  organization: {
-    id: 0,
-    name: '',
-    created_at: '',
-    updated_at: '',
-    legal_name: '',
-    address_locality: '',
-    address_region: '',
-    address_country: '',
-    phone: '',
-    postal_code: '',
-    email: '',
-    siret: '',
-    street_address: ''
   },
   isConnected: false,
   keepSession: true
@@ -49,7 +49,6 @@ export const authSlice = createSlice({
 
       state.jwt = action.payload.jwt;
       state.creator = { ...action.payload.creator };
-      state.organization = { ...action.payload.organization };
       state.isConnected = true;
       state.keepSession = action.payload.keepSession;
     },
@@ -59,7 +58,6 @@ export const authSlice = createSlice({
 
       state.jwt = null;
       state.creator = { ...initialState.creator };
-      state.organization = { ...initialState.organization };
       state.isConnected = false;
       state.keepSession = initialState.keepSession;
     },

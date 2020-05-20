@@ -21,6 +21,7 @@
     "randomstring": "^1.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-dropzone": "^11.0.1",
     "react-i18next": "^11.4.0",
     "react-icons": "^3.10.0",
     "react-redux": "^7.2.0",

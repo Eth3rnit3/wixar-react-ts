@@ -14,7 +14,6 @@ export interface IAppState{
 export interface IAuthState{
   jwt: string | null;
   creator: ICreator;
-  organization: IOrganization;
   session?: ISession;
   isConnected: boolean;
   keepSession: boolean;
