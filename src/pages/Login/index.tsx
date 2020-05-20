@@ -7,6 +7,7 @@ import { signIn, getIsConnected } from '../../features/authSlice';
 import Input from '../../components/Form/Input';
 
 import './index.scss';
+import Button from '../../components/Form/Button';
 
 interface ILoginProps {
 }
@@ -54,7 +55,9 @@ const Login: React.FunctionComponent<ILoginProps> = () => {
             label={t('pages.login.keepSession')}
             type="checkbox"
           />
-          <button type="submit">{t('pages.login.login')}</button>
+          <Button type="submit">
+            {t('pages.login.login')}
+          </Button>
         </form>
       </div>
     </div>

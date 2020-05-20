@@ -23,6 +23,9 @@
       box-shadow: 0 0 10px $bluegreen;
     }
   }
+  input[type=checkbox].wixar-form-input {
+    background-color: red;
+  }
 }
 
 .wixar-form-group.box {

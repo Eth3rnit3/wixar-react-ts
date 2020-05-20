@@ -1,0 +1,17 @@
+@import '../../assets/styles/colors.scss';
+
+button.wixar-button {
+  background: $light-green-radian;
+  border: none;
+  box-shadow: 2.42476px 2.42476px 6.0619px rgba(0, 0, 0, 0.3);
+  border-radius: 2.42476px;
+
+  &:disabled {
+    background: transparent !important;
+    border: 1px solid rgba(0, 200, 137, 0.8);
+    box-shadow: 2.42476px 2.42476px 6.0619px rgba(0, 0, 0, 0.3);
+    border-radius: 2.42476px;
+    color: $green;
+    opacity: 0.6;
+  }
+}
