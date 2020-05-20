@@ -10,6 +10,12 @@
         "password": "Mot de passe",
         "keepSession": "Rester connecté",
         "login": "Se connecter"
+      },
+      "projects": {
+        "title": "Projets"
+      },
+      "gallery": {
+        "title": "Gallery"
       }
     }
   }

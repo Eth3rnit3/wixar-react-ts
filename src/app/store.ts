@@ -3,6 +3,8 @@ import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import appReducer from '../features/appSlice';
 import authReducer, { keyStore } from '../features/authSlice';
+import projectsReducer from '../features/projectsSlice';
+import mediasReducer from '../features/mediasSlice';
 
 const persistConfig = {
   key: keyStore,
@@ -13,7 +15,9 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   app: appReducer,
-  auth: authReducer
+  auth: authReducer,
+  projects: projectsReducer,
+  medias: mediasReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

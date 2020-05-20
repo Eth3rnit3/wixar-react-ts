@@ -47,3 +47,25 @@ export interface IOrganization {
   siret: string;
   street_address: string;
 }
+
+export interface IProject {
+  id: number;
+  name: string;
+  language: {
+    id: number;
+    name: string;
+  };
+  need_login: boolean;
+  organization: IOrganization;
+}
+
+export interface IMedia {
+  id: number;
+  name: string;
+  type: 'image' | 'audio' | 'video';
+  s3_url: string;
+  is_used: boolean;
+  created_at: string;
+  updated_at: string;
+  organization: IOrganization;
+}
