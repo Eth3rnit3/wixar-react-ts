@@ -8,6 +8,7 @@ import Input from '../../components/Form/Input';
 
 import './index.scss';
 import Button from '../../components/Form/Button';
+import FlatSelect from '../../components/Form/FlatSelect';
 
 interface ILoginProps {
 }
@@ -34,7 +35,7 @@ const Login: React.FunctionComponent<ILoginProps> = () => {
     <div className="login-page d-flex flex-column justify-content-center align-items-center">
       <div>
         <h1>{t('pages.login.title')}</h1>
-        <form className="d-flex flex-column" onSubmit={runSignIn}>
+        <form className="d-flex flex-column justify-content-center align-items-center" onSubmit={runSignIn}>
           <Input
             className="lg"
             id="identifier"
@@ -45,6 +46,7 @@ const Login: React.FunctionComponent<ILoginProps> = () => {
             className="lg"
             id="password"
             name="password"
+            type="password"
             label={t('pages.login.password')}
           />
           <Input

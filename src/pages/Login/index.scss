@@ -1,6 +1,11 @@
 .login-page {
   height: 100%;
   div {
-    width: 50%;
+    width: 40%;
+    form {
+      button {
+        width: 50%;
+      }
+    }
   }
 }
