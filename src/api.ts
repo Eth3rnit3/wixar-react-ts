@@ -8,7 +8,8 @@ const apiUrls = {
     all: `${baseUrl}/projects`
   },
   medias: {
-    all: `${baseUrl}/uploads`
+    all: `${baseUrl}/source-medias`,
+    create: `${baseUrl}/uploads`
   },
 };
 

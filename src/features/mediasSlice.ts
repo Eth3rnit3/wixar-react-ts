@@ -31,7 +31,7 @@ export const { setLoading, setMedias, clearMedias } = mediaSlice.actions;
 export const fetch = (query: any = {}) => (dispatch: Dispatch) => {
   dispatch(setLoading(true));
   axios.get(apiUrls.medias.all, {params: {...query}})
-  .then((response) => setMedias(response.data))
+  .then((response) => dispatch(setMedias(response.data)))
   .catch((error) => console.log(error))
   .finally(() => dispatch(setLoading(false)));
 };

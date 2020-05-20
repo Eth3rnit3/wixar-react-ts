@@ -1,0 +1,14 @@
+@import '../../assets/styles/colors.scss';
+
+.wixar-gallery {
+  .gallery-container {
+    .media-item {
+      img, audio, video {
+        width: 300px;
+      }
+      p{
+        color: $bluegreen;
+      }
+    }
+  }
+}
